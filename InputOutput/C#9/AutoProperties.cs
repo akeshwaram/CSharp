@@ -14,8 +14,8 @@ namespace InputOutput.C_9
 		//init-only properties - can be initialized during object creation or in the constructor, but can't be modified after that
 		public string FirstName { get; init; } = "sdfsd";
 
-		public Person() { 
-
+		public Person() {
+			LastName = "sdfs";
 			FirstName = string.Empty;
 		}
 

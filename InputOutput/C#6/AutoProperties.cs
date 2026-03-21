@@ -13,8 +13,12 @@ namespace InputOutput.C_6
 		//added support for read-only properties - can still be initialized in the constructor, but can't be modified after that
 		public string LastName { get; }
 
-		public string FirstName { get; }
+		public string FirstName { get; } = "Ashwin";
 
+		public Person() {
+			//constructor overrides initializer
+			FirstName = "Overriden";
+		}
 		public Person(int age, string firstName, string lastName) {
 			LastName = lastName;
 		}

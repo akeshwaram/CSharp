@@ -1,5 +1,7 @@
 ﻿using InputOutput.C_3;
 using InputOutput.C_4;
+using InputOutput.C_5;
+using InputOutput.C_6;
 using InputOutput.Exercises.Partial_Classes;
 using InputOutput.OOPS;
 
@@ -7,12 +9,20 @@ internal class Program
 {
 	private async static Task<int> Main(string[] args)
 	{
+		//NameOf.Demo();
+		//NullPropogation.Demo();
+		//StringInterpolation.Demo();
+		var task = await ExceptionFilters.Demo();
+
 		var aType = new AnonymousTypes();
 		aType.Demo();
 
 		var dyn = new DynamicType();
 		dyn.Demo();
 
+		var s = CallerInfoAttributes.DoSomething("This method prints caller info");
+
+		new CallerInfoAttributes().DoSomethingElse();
 		//ThreadSafety.AchieveRaceCondition();
 		//Deadlock.SimulateDeadlock();
 
