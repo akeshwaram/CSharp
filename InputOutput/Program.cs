@@ -2,6 +2,8 @@
 using InputOutput.C_4;
 using InputOutput.C_5;
 using InputOutput.C_6;
+using InputOutput.C_7;
+using InputOutput.C_7._3;
 using InputOutput.Exercises.Partial_Classes;
 using InputOutput.OOPS;
 
@@ -9,6 +11,12 @@ internal class Program
 {
 	private async static Task<int> Main(string[] args)
 	{
+		MinorFeatures73.Demo();
+		BinaryLiterals.Demo();
+		//RefLocalRefReturn.Demo();
+		//LocalFunctions.Demo(5, 10);
+		//PatternMatching.GetDiscount(null);
+		//TupleDeconstruct.Demo();
 		//NameOf.Demo();
 		//NullPropogation.Demo();
 		//StringInterpolation.Demo();
