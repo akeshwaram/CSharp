@@ -11,6 +11,9 @@ internal class MinorFeatures72
 		//stackalloc initializers
 		Span<int> numbers = stackalloc int[] { 1, 2, 3, 4, 5 };
 
+		//Span<int> is a ref struct hence it cannot be boxed and cannot be used with heap-allocated arrays, it can only be used with stack-allocated arrays
+		//object o = numbers; //this is an error - you cannot box a ref struct
+
 		//this is incorrect because int[] is a heap-allocated array and cannot be used with stackalloc
 		//int[] arr = stackalloc int[] { 1, 2, 3, 4, 5 };
 
