@@ -1,4 +1,10 @@
-﻿namespace InputOutput.DataTypes;
+﻿using System.Buffers.Text;
+
+namespace InputOutput.DataTypes;
+
+//record - reference based, immutable, value-based equality
+//record struct - value based, mutable, value-based equality
+//readonly record struct - value based, immutable, value-based equality
 
 public record Person
 {
@@ -11,6 +17,11 @@ public record Person
 		Age = age;
 	}
 }
+
+public record struct Point(int X, int Y);
+
+public readonly record struct ReadOnlyPoint(int X, int Y);
+
 internal class Records
 {
 	public static void CreateRecords()

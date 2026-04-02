@@ -1,104 +1,110 @@
-﻿using InputOutput.C_3;
+﻿using InputOutput.C_11;
+using InputOutput.C_12;
+using InputOutput.C_3;
 using InputOutput.C_4;
 using InputOutput.C_5;
 using InputOutput.C_6;
 using InputOutput.C_7;
 using InputOutput.C_7._3;
+using InputOutput.C_9;
+using InputOutput.Exercises;
 using InputOutput.Exercises.Partial_Classes;
 using InputOutput.OOPS;
 
-internal class Program
-{
-	private async static Task<int> Main(string[] args)
-	{
-		MinorFeatures73.Demo();
-		BinaryLiterals.Demo();
-		//RefLocalRefReturn.Demo();
-		//LocalFunctions.Demo(5, 10);
-		//PatternMatching.GetDiscount(null);
-		//TupleDeconstruct.Demo();
-		//NameOf.Demo();
-		//NullPropogation.Demo();
-		//StringInterpolation.Demo();
-		var task = await ExceptionFilters.Demo();
+ListPatternsExample.Demo();
+ParamsSpan.Demo();
+//ExternExample.Demo();
+GenericMath gm = new();
+gm.Demo();
+//var cd = new CachedDelegates();
+//cd.Demo();
 
-		var aType = new AnonymousTypes();
-		aType.Demo();
+//RuntimePolymorphism.Demo();
+//MinorFeatures73.Demo();
+//BinaryLiterals.Demo();
+//RefLocalRefReturn.Demo();
+//LocalFunctions.Demo(5, 10);
+//PatternMatching.GetDiscount(null);
+//TupleDeconstruct.Demo();
+//NameOf.Demo();
+//NullPropogation.Demo();
+//StringInterpolation.Demo();
+var task = await ExceptionFilters.Demo();
 
-		var dyn = new DynamicType();
-		dyn.Demo();
+var aType = new AnonymousTypes();
+aType.Demo();
 
-		var s = CallerInfoAttributes.DoSomething("This method prints caller info");
+var dyn = new DynamicType();
+dyn.Demo();
 
-		new CallerInfoAttributes().DoSomethingElse();
-		//ThreadSafety.AchieveRaceCondition();
-		//Deadlock.SimulateDeadlock();
+var s = CallerInfoAttributes.DoSomething("This method prints caller info");
 
-		//Inheritance i = new();
-		//i.DoSomething();
+new CallerInfoAttributes().DoSomethingElse();
+//ThreadSafety.AchieveRaceCondition();
+//Deadlock.SimulateDeadlock();
 
-		char[] chars = { 'h', 'e', 'l', 'l', 'o' };
-		Console.WriteLine(chars);
-		var a = new A();
-		a.Print();
-		a.Email();
+//Inheritance i = new();
+//i.DoSomething();
 
-		Polymorphism p = new();
-		p.DoSomething();
-		//Thread t = Thread.CurrentThread;
-		//t.Name = "Main Thread";
-		//Console.WriteLine($"main thread name is {t.Name}");
-		////Tasks.CreateProcess();
-		////Tasks.CreateThreads();
-		//Tuples.PrintTuple();
+char[] chars = { 'h', 'e', 'l', 'l', 'o' };
+Console.WriteLine(chars);
+var a = new A();
+a.Print();
+a.Email();
 
-		//var secondLargest = MyStack.ReturnSecondLargestElement([1, 5, 6, 2, 8, 9, 6]);
-		//Console.WriteLine($"second largest: {secondLargest}");
+Polymorphism p = new();
+p.DoSomething();
+//Thread t = Thread.CurrentThread;
+//t.Name = "Main Thread";
+//Console.WriteLine($"main thread name is {t.Name}");
+////Tasks.CreateProcess();
+////Tasks.CreateThreads();
+//Tuples.PrintTuple();
 
-		//var setbits = BitOperations.CountSetBits(23);
+//var secondLargest = MyStack.ReturnSecondLargestElement([1, 5, 6, 2, 8, 9, 6]);
+//Console.WriteLine($"second largest: {secondLargest}");
 
-		//var list = new List<int>() { 1, 2};
-		//var newlist = Generics.CopyAtMost(list, 1);
-		//Dictionaries.CreateDictionary();
-		//var rate = Dictionaries.GetRate("EUR", "INR");
+//var setbits = BitOperations.CountSetBits(23);
 
-		//var source = new List<int>() { 1, 2, 3, 4, 5, 6 };
-		//var acc = FunctionsUsingLoops.Reduce(source, 0, (x, y) => x + y);
-		//var result = FunctionsUsingLoops.Take(source, 5);
+//var list = new List<int>() { 1, 2};
+//var newlist = Generics.CopyAtMost(list, 1);
+//Dictionaries.CreateDictionary();
+//var rate = Dictionaries.GetRate("EUR", "INR");
 
-		//StringBuilder sb = new StringBuilder();
+//var source = new List<int>() { 1, 2, 3, 4, 5, 6 };
+//var acc = FunctionsUsingLoops.Reduce(source, 0, (x, y) => x + y);
+//var result = FunctionsUsingLoops.Take(source, 5);
 
-		//var n = DynamicProgramming.FibMemo(6);
+//StringBuilder sb = new StringBuilder();
 
-		//var decimals = new List<decimal> { 1, 2 };
-		//Generics.RefineList(decimals);
-		//Generics.RefineList<Decimal>(decimals);
-		//Generics.RefineList<Decimal, Decimal>(decimals);
+//var n = DynamicProgramming.FibMemo(6);
 
-		//var b = new Box<List<decimal>>();
+//var decimals = new List<decimal> { 1, 2 };
+//Generics.RefineList(decimals);
+//Generics.RefineList<Decimal>(decimals);
+//Generics.RefineList<Decimal, Decimal>(decimals);
 
-		//var evenNumbers = Iterators.ReturnEvenNumbers(11);
-		//var iterator = evenNumbers.GetEnumerator();
+//var b = new Box<List<decimal>>();
 
-		//while (iterator.MoveNext()) { 
+//var evenNumbers = Iterators.ReturnEvenNumbers(11);
+//var iterator = evenNumbers.GetEnumerator();
 
-		//}
+//while (iterator.MoveNext()) { 
 
-		//int[] arr = new []{ 1, 2};
-		//int a = arr.Count();
-		//Console.WriteLine(5.ToString());
+//}
+
+//int[] arr = new []{ 1, 2};
+//int a = arr.Count();
+//Console.WriteLine(5.ToString());
 
 
-		//Action<string> action = s => { Console.WriteLine(s); };
+//Action<string> action = s => { Console.WriteLine(s); };
 
-		//Func<string, int> multiply = x =>  x.Length * x.Length; ;
+//Func<string, int> multiply = x =>  x.Length * x.Length; ;
 
-		//action("");
+//action("");
 
-		//Task<int> lengthTask = Tasks.GetPageLengthAsync("sample URL");
-		//return lengthTask.Result;
-		return 1;
-		//Console.WriteLine(lengthTask.Result);
-
-	}
-}
+//Task<int> lengthTask = Tasks.GetPageLengthAsync("sample URL");
+//return lengthTask.Result;
+return 1;
+//Console.WriteLine(lengthTask.Result);
