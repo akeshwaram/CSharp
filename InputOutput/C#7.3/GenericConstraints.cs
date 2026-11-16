@@ -30,7 +30,7 @@ internal class GenericConstraints<TClass> where TClass: class
 	{ }
 
 	//T1 must be a reference type with a parameterless constructor, and T2 must implement IDisposable
-	void Process6<T1,T2>() where T1: class, new() where T2 : IDisposable
+	void Process6<T1,T2>() where T1: class, new() where T2: IDisposable
 	{ }
 
 	//introduced in 7.3

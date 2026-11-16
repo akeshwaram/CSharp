@@ -12,8 +12,7 @@ internal class Person
 	//required keyword forces the property to be initialized during object creation
 	//Person p = new Person() => will cause compile-time error because FirstName is not initialized
 	public required string FirstName {
-		get;
-
+		get; 
 		set { 
 			field = !string.IsNullOrEmpty(value) ? value: throw new ArgumentException("First name cannot be null or empty");
 		}

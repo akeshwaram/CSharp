@@ -12,9 +12,9 @@ internal class PrimaryConstructor(string name, int age)
 	//other constructors must call the primary constructor
 	public PrimaryConstructor(string name, int age, int x): this(name, age)
 	{
-		
+
 	}
 
-	//other constructors must call the primary constructor
-	public PrimaryConstructor() : this("", default){ }
+	//other constructors must call the primary constructor or another contructor that calls the primary constructor
+	public PrimaryConstructor() : this("", default, 0){ }
 }

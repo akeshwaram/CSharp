@@ -4,19 +4,23 @@ namespace InputOutput.DataTypes;
 
 internal class Tuples
 {
-	public static (string Name, string location) CreateAndReturnTuple()
+	public static (string, string) CreateAndReturnTuple()
 	{
-		var person = (name: "Ashwin", location: "Hyderabad");
-		
+		var person = ("Ashwin", "Hyderabad");
 		return person;
 	}
 
+	public static (string Name, string Location) CreateNamedTuple()
+	{ 
+		var person = (Name: "Ashwin", Location: "Hyderabad");
+		return person;
+	}
 	public static void PrintTuple()
 	{
-		var person = CreateAndReturnTuple();
-		Console.WriteLine(person.Name);
+		var tuple = CreateAndReturnTuple();
+		Console.WriteLine($"Name: {tuple.Item1}, Location: {tuple.Item2}");
 
-		var random = (21, DateTime.Now);
-		Console.WriteLine(random.Item1);
+		var namedTuple = CreateNamedTuple();
+		Console.WriteLine($"Name: {namedTuple.Name}, Location: {namedTuple.Location}");
 	}
 }

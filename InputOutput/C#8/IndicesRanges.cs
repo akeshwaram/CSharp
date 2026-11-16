@@ -9,7 +9,7 @@ internal class IndicesRanges
 {
 	public static void Demo() {
 		int[] xs = [0, 10, 20, 30, 40];
-		int last = xs[^1];
+		int last = xs[^0];
 		Console.WriteLine(last);  // output: 40
 		
 		List<string> lines = ["one", "two", "three", "four"];

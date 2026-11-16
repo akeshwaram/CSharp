@@ -8,7 +8,7 @@ internal class Person
 {
 	public int Age { get; } = 25;
 
-	public string LastName { get; }
+	public string LastName { get; } = "asdas";
 
 	//init-only properties - can be initialized during object creation or in the constructor, but can't be modified after that
 	public string FirstName { get; init; } = "sdfsd";
@@ -21,7 +21,7 @@ internal class Person
 	public void Demo()
 	{
 		var p = new Person() { 
-			FirstName = "dfds"
+			FirstName = "dfds",
 		};
 
 		//this will cause a compile error, because FirstName is marked init

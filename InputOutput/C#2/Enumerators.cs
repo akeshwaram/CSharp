@@ -17,6 +17,11 @@ internal class Enumerators
 			//do something
 		}
 
+		foreach (var i in list)
+		{
+			//do something
+		}
+
 		//can't use for loop with enumerators - they don't support indexing
 		var normalEnumerator = list.GetEnumerator();
 		while (normalEnumerator.MoveNext())

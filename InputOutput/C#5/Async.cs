@@ -21,7 +21,7 @@ internal class Async
 		var hashBrownTask = FryHashBrownsAsync(3);
 		var toastTask = MakeToastWithButterAndJamAsync(2);
 
-		var breakfastTasks = new List<Task> { eggsTask, hashBrownTask, toastTask };
+		List<Task> breakfastTasks = [ eggsTask, hashBrownTask, toastTask ];
 
 		//you can start the FryHashBrownsAsync task. You can choose when to wait on the task by using await. Meanwhile, the task is running and you can do other work.
 		var hashBrownTask2 = FryHashBrownsAsync(3);

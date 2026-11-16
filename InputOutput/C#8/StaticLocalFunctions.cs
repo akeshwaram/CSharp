@@ -6,11 +6,11 @@ namespace InputOutput.C_8;
 
 internal class StaticLocalFunctions
 {
-	public static void Demo(int x, int y)
+	public void Demo(int x, int y)
 	{
 		var a = x;
 		var b = y;
-
+		
 		Console.WriteLine($"Sum is {Sum()}");
 		Product(out int p);
 		Console.WriteLine($"Product is {p}");

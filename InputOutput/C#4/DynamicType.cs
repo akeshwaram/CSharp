@@ -8,8 +8,15 @@ internal class DynamicType
 {
 	public void Demo() {
 		object obj = 1;
-		dynamic dyn = 1;
-		
+		dynamic dyn = new List<string>();
+
+		//error
+		//obj += 3;
+
+		//OK during compilte, but exception at runtime
+		dyn += 3;
+
+
 		//A compiler error is reported for expression obj + 3.
 		//no error is reported for dyn + 3. The expression that contains dyn isn't checked at compile time because the type of dyn is dynamic.
 		//obj += 2; => static binding - compile decides everything at compile time

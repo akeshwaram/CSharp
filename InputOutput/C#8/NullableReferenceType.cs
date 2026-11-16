@@ -4,7 +4,7 @@ internal class NullableReferenceType
 	public static string? Demo()
 	{
 		//as we are creating a variable to accept null values, we need to explicitly declare it as nullable reference type by adding a question mark after the type
-		string message = null;
+		string? message = null;
 
 		//first time - compiler assumes it's an accident and hence shows a warning
 		Console.WriteLine($"The length of the message is {message.Length}");

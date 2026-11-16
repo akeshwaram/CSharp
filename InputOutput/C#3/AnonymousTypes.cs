@@ -28,9 +28,9 @@ internal class AnonymousTypes
 		Vehicles.Add(vehicle2);
 		Vehicles.Add(vehicle3);
 		Vehicles.Add(vehicle4);
-
+		
 		//most common use of anonymous types is in LINQ queries to create a new type with only the properties you need
-		var anonymouseVehicles = Vehicles.Select(v => new { v.Year, v.Make, v.Mileage });
+		var anonymouseVehicles = Vehicles.Where(v => v.Mileage > 10000).Select(v => new { v.Year, v.Make, v.Mileage });
 
 		//Select - each elements produces exactly one result
 		var vehicleNames = Vehicles.Select(v => v.Make);

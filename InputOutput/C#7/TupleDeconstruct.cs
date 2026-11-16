@@ -35,6 +35,4 @@ internal class TupleDeconstruct
 
 		return (count, sum);
 	}
-
-
 }

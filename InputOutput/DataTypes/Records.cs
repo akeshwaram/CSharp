@@ -27,6 +27,7 @@ internal class Records
 	public static void CreateRecords()
 	{
 		var p1 = new Person("Ashwin", 21);
+		p1.Age = 22;
 		var p2 = p1 with { Age = 41 };
 	}
 

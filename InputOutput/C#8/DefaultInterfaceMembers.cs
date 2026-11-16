@@ -19,6 +19,11 @@ public class MyLogger: Ilogger
 	{
 		Console.WriteLine(warning);
 	}
+
+	//public void LogError(string error)
+	//{
+	//	Console.WriteLine($"MyLogger: {error}");
+	//}
 }
 
 public class defaultInterfaceMembers

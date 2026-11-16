@@ -10,7 +10,7 @@ internal class BinaryLiterals
 	public string ReturnUpperCase(string s) => s != null? s.ToUpper() : throw new ArgumentNullException(nameof(s));
 
 	public static void Demo() {
-		int x = 0b0010; //binary literal for 2
+		int x = 0x0010; //binary literal for 2
 		int y = 2;
 
 		Console.WriteLine($"is x same as y? {x == y}");

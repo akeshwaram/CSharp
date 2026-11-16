@@ -42,6 +42,9 @@ internal class ExceptionFilters
 			case int n when n < 0:
 				Console.WriteLine("Negative number");
 				break;
+			case(0):
+				Console.WriteLine("Zero");
+				break;
 
 			default:
 				Console.WriteLine("Zero");

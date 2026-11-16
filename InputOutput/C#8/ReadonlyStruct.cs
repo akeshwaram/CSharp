@@ -16,6 +16,11 @@ internal readonly struct Person
 		//this.Name = "";
 	}
 
+	public Person(string name)
+	{
+		Name = name;
+	}
+
 }
 
 //if you can't make the struct readonly, you can make the method readonly, which means it cannot modify the state of the struct

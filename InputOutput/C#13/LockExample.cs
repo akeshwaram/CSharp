@@ -11,8 +11,7 @@ internal class LockExample
 
 		using (myLock.EnterScope()) {
 			//do something
-
-
+			
 			//automatically releases the lock when the scope ends
 		}
 	}

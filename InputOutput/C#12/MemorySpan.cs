@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace InputOutput.C_12;
@@ -9,6 +10,14 @@ internal class MemorySpan
 	public static int Sum(Memory<int> numbers)
 	{
 		Span<int> span = numbers.Span;
+		
+		int[] n = [1, 2, 3, 4];
+		Span<int> spanNumbers = n;
+
+		Memory<int> memoryNumbers = new int[] { 1, 2, 3, 4, 5 };
+		spanNumbers = memoryNumbers.Span;
+
+		span = numbers[0..5].Span;
 
 		var total = 0;
 		foreach (var i in span)
