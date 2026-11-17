@@ -2,6 +2,7 @@
 using InputOutput.C_10;
 using InputOutput.C_11;
 using InputOutput.C_12;
+using InputOutput.C_14;
 using InputOutput.C_3;
 using InputOutput.C_4;
 using InputOutput.C_5;
@@ -123,3 +124,15 @@ MinorFeatures73.Demo();
 ////return lengthTask.Result;
 //return 1;
 ////Console.WriteLine(lengthTask.Result);
+
+//can call it in two different ways
+"str".AddBlah();
+ExtensionMembers.AddBlah("str");
+var isLength5 = "str".IsLength5;
+"str".AddBlahAndSomethingElse("something else");
+
+//extension block only the receiver type - str is missing
+String.GetCount("ashwin");
+
+//error - can only be called as a static method for type String
+//"ashwin".GetCount();
